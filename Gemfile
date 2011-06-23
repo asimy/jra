@@ -9,6 +9,9 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'surveyor', :git => 'https://github.com/NUBIC/surveyor.git', :branch => 'rails3'
 gem 'haml'
+gem 'sass'
+gem 'cancan'
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -34,6 +34,8 @@ module SurveyorControllerCustomMethods
   end
 end
 class SurveyorController < ApplicationController
+  load_and_authorize_resource
+  
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
 end
