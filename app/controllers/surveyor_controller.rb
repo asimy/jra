@@ -1,5 +1,8 @@
 module SurveyorControllerCustomMethods
+  require 'devise'
   def self.included(base)
+    # load_and_authorize_resource #devise
+    
     # base.send :before_filter, :require_user   # AuthLogic
     # base.send :before_filter, :login_required  # Restful Authentication
     # base.send :layout, 'surveyor_custom'
@@ -34,7 +37,6 @@ module SurveyorControllerCustomMethods
   end
 end
 class SurveyorController < ApplicationController
-  load_and_authorize_resource
   
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
