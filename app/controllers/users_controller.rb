@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
   
+  def formatted_email
+    "#{full_name} <#{email}>"
+  end
+  
   def index
     @users = User.all
 

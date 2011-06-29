@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   
   has_many :responses, :through => :client
   has_many :clients, :class_name => "Client", :foreign_key => "reference_id"
+  
+  validates_presence_of :first_name
+  validates_presence_of :last_name
+  validates_presence_of :email
 end
