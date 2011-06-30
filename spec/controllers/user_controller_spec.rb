@@ -1,17 +1,19 @@
 require 'spec_helper'
 
 describe UsersController do
+  render_views
 
-  # def valid_attributes
-  #   {}
-  # end
-  # 
-  # describe "GET index" do
-  #   it "assigns all users as @users" do
-  #     user = User.create! valid_attributes
-  #     get :index
-  #     assigns(:users).should eq([user])
-  #   end
-  # end
+  describe "GET 'new'" do
+    it "should be successful" do
+      get 'new'
+      response.should be_success
+    end
 
+    it "should have the right title" do
+      get 'new'
+      response.should have_selector("title", :content => "Sign up")
+    end
+  end
+  
+  
 end

@@ -12,6 +12,11 @@ Jra::Application.routes.draw do
   devise_for :users
   
   resources :users
+  
+  match '/contact', :to => 'pages#contact'
+  match '/about', :to => 'pages#about'
+  match '/help', :to => 'pages#help'
+  match '/signup', :to => "users#sign_up"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
