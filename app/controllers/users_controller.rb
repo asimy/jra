@@ -1,17 +1,10 @@
 class UsersController < ApplicationController
   
-  def name
-    "#{first_name} #{last_name}"
-  end
+  before_filter :authenticate_user!
   
-  def full_name
-    if middle_name.nil
-      name
-    elsif middle_name.size == 1
-      "#{first_name} #{middle_name}. #{last_name}"
-    else
-      "#{first_name} #{middle_name} #{last_name}"
-    end
+  def sign_up
+    super
+    @title = "Sign up"
   end
   
   def formatted_email

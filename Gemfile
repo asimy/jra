@@ -12,6 +12,7 @@ gem 'haml'
 gem 'sass'
 gem 'cancan'
 gem 'devise'
+gem 'nifty-generators'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,6 +1,7 @@
 module SurveyorControllerCustomMethods
   require 'devise'
   def self.included(base)
+    base.send :before_filter, :authenticate_user!
     # load_and_authorize_resource #devise
     
     # base.send :before_filter, :require_user   # AuthLogic
