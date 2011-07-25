@@ -1,7 +1,0 @@
-<tr class="fields">
-  <td><%= f.email_field :first_name %></td>
-  <td><%= f.email_field :last_name %></td>
-  <td><%= f.email_field :email %></td>
-  <td><%= f.collection_select :role, User::ROLES, :to_s, :humanize %></td>
-  <td><%= f.hidden_field :_destroy%><%= link_to_function "Remove", "remove_fields(this)" %>
-</tr>

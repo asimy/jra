@@ -10,11 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110629214213) do
-=======
 ActiveRecord::Schema.define(:version => 20110622045461) do
->>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -60,11 +56,6 @@ ActiveRecord::Schema.define(:version => 20110622045461) do
     t.text     "text_value"
     t.string   "string_value"
     t.string   "response_other"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "groups", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -171,29 +162,6 @@ ActiveRecord::Schema.define(:version => 20110622045461) do
 
   add_index "surveys", ["access_code"], :name => "surveys_ac_idx", :unique => true
 
-<<<<<<< HEAD
-  create_table "users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "first_name"
-    t.string   "last_name"
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
-
-=======
->>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
   create_table "validation_conditions", :force => true do |t|
     t.integer  "validation_id"
     t.string   "rule_key"

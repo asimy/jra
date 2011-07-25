@@ -1,9 +1,5 @@
 module SurveyorControllerCustomMethods
-  require 'devise'
   def self.included(base)
-    base.send :before_filter, :authenticate_user!
-    # load_and_authorize_resource #devise
-    
     # base.send :before_filter, :require_user   # AuthLogic
     # base.send :before_filter, :login_required  # Restful Authentication
     # base.send :layout, 'surveyor_custom'
@@ -38,10 +34,6 @@ module SurveyorControllerCustomMethods
   end
 end
 class SurveyorController < ApplicationController
-<<<<<<< HEAD
-  
-=======
->>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
 end

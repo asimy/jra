@@ -9,13 +9,6 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'surveyor', :git => 'https://github.com/NUBIC/surveyor.git', :branch => 'rails3'
 gem 'haml'
-<<<<<<< HEAD
-gem 'sass'
-gem 'cancan'
-gem 'devise'
-gem 'nifty-generators'
-=======
->>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -36,14 +29,6 @@ gem 'nifty-generators'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-group :development do
+group :development, :test do
   gem 'rspec-rails'
-end
-group :test do
-  gem 'rspec-rails'
-  gem 'webrat'
-  gem 'autotest', '4.4.6'
-  gem 'autotest-rails-pure', '4.1.2'
-  gem 'autotest-fsevent', '0.2.4'
-  gem 'autotest-growl', '0.2.9'
 end
