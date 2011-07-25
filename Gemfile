@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -29,6 +29,12 @@ gem 'haml'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-group :development, :test do
-  gem 'rspec-rails'
+group :development, :test do  
+  gem 'rspec-rails'  
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'  
+  gem 'launchy'  
+  gem 'database_cleaner'  
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i  
+  gem 'guard-rspec'  
+  gem 'growl'
 end
