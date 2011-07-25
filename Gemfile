@@ -31,7 +31,8 @@ gem 'haml'
 # and rake tasks are available in development mode:
 group :development, :test do  
   gem 'rspec-rails'  
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'  
+  # gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'  
+  gem 'webrat'
   gem 'launchy'  
   gem 'database_cleaner'  
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i  

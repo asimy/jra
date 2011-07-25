@@ -1,16 +1,4 @@
 GIT
-  remote: git://github.com/jnicklas/capybara.git
-  revision: 4fc07dbdc8146bb7ea6039779af6b0fef2196abb
-  specs:
-    capybara (1.0.0)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0.0)
-      xpath (~> 0.1.4)
-
-GIT
   remote: https://github.com/NUBIC/surveyor.git
   revision: dab8490c54ffc32d455a342b454c84261bd6afcd
   branch: rails3
@@ -55,14 +43,11 @@ GEM
     addressable (2.2.6)
     arel (2.0.10)
     builder (2.1.2)
-    childprocess (0.2.0)
-      ffi (~> 1.0.6)
     database_cleaner (0.6.7)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     fastercsv (1.5.4)
-    ffi (1.0.9)
     formtastic (1.2.4)
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
@@ -77,7 +62,6 @@ GEM
     jquery-rails (1.0.11)
       railties (~> 3.0)
       thor (~> 0.14)
-    json_pure (1.5.3)
     launchy (2.0.4)
       addressable (~> 2.2.6)
     macaddr (1.0.0)
@@ -125,27 +109,22 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
-    rubyzip (0.9.4)
     sass (3.1.3)
-    selenium-webdriver (2.0.1)
-      childprocess (>= 0.1.9)
-      ffi (>= 1.0.7)
-      json_pure
-      rubyzip
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.28)
     uuid (2.3.2)
       macaddr (~> 1.0)
-    xpath (0.1.4)
-      nokogiri (~> 1.3)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara!
   database_cleaner
   growl
   guard-rspec
@@ -157,3 +136,4 @@ DEPENDENCIES
   rb-fsevent
   rspec-rails
   surveyor!
+  webrat
