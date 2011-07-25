@@ -9,10 +9,13 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'surveyor', :git => 'https://github.com/NUBIC/surveyor.git', :branch => 'rails3'
 gem 'haml'
+<<<<<<< HEAD
 gem 'sass'
 gem 'cancan'
 gem 'devise'
 gem 'nifty-generators'
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
 
 # Use unicorn as the web server
 # gem 'unicorn'

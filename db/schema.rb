@@ -10,7 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20110629214213) do
+=======
+ActiveRecord::Schema.define(:version => 20110622045461) do
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -33,18 +37,6 @@ ActiveRecord::Schema.define(:version => 20110629214213) do
     t.datetime "updated_at"
     t.string   "default_value"
     t.string   "api_id"
-  end
-
-  create_table "clients", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "middle_name"
-    t.date     "date_of_birth"
-    t.string   "gender"
-    t.string   "ethnicity"
-    t.string   "unique_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "dependencies", :force => true do |t|
@@ -179,6 +171,7 @@ ActiveRecord::Schema.define(:version => 20110629214213) do
 
   add_index "surveys", ["access_code"], :name => "surveys_ac_idx", :unique => true
 
+<<<<<<< HEAD
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
@@ -199,6 +192,8 @@ ActiveRecord::Schema.define(:version => 20110629214213) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
   create_table "validation_conditions", :force => true do |t|
     t.integer  "validation_id"
     t.string   "rule_key"

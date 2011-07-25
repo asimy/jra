@@ -42,6 +42,7 @@ GEM
       activesupport (= 3.0.9)
     activesupport (3.0.9)
     arel (2.0.10)
+<<<<<<< HEAD
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
     autotest-fsevent (0.2.4)
@@ -49,12 +50,9 @@ GEM
     autotest-growl (0.2.9)
     autotest-rails-pure (4.1.2)
     bcrypt-ruby (2.1.4)
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
     builder (2.1.2)
-    cancan (1.6.5)
-    devise (1.4.0)
-      bcrypt-ruby (~> 2.1.2)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -75,9 +73,12 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+<<<<<<< HEAD
     nifty-generators (0.4.6)
     nokogiri (1.4.6)
     orm_adapter (0.0.5)
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
     pg (0.11.0)
     polyglot (0.3.1)
     rack (1.2.3)
@@ -122,29 +123,34 @@ GEM
     tzinfo (0.3.28)
     uuid (2.3.2)
       macaddr (~> 1.0)
+<<<<<<< HEAD
     warden (1.0.4)
       rack (>= 1.0)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   autotest (= 4.4.6)
   autotest-fsevent (= 0.2.4)
   autotest-growl (= 0.2.9)
   autotest-rails-pure (= 4.1.2)
   cancan
   devise
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
   haml
   jquery-rails
   nifty-generators
   pg
   rails (= 3.0.9)
   rspec-rails
-  sass
   surveyor!
   webrat

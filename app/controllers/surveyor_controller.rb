@@ -38,7 +38,10 @@ module SurveyorControllerCustomMethods
   end
 end
 class SurveyorController < ApplicationController
+<<<<<<< HEAD
   
+=======
+>>>>>>> parent of 08588aa... Adding users, clients and completely non-functional screening tools
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
 end
