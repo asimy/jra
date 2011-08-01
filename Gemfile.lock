@@ -41,6 +41,7 @@ GEM
       activesupport (= 3.0.9)
     activesupport (3.0.9)
     addressable (2.2.6)
+    annotate (2.4.0)
     arel (2.0.10)
     builder (2.1.2)
     database_cleaner (0.6.7)
@@ -125,6 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   database_cleaner
   growl
   guard-rspec
