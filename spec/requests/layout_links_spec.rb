@@ -22,4 +22,8 @@ describe "LayoutLinks" do
     response.should have_selector('title', :content => "Juvenile Risk Assessment | Contact")
   end
   
+  it "should have a registration pages at '/register'" do
+    get '/register'
+    response.should have_selector('title', :content => "Juvenile Risk Assessment | Register")
+  end
 end

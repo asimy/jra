@@ -1,5 +1,7 @@
 Jra::Application.routes.draw do
   get "users/new"
+  
+  match '/register', :to => "users#new"
 
   match '/contact', :to => 'pages#contact'
   match '/help', :to => 'pages#help'
