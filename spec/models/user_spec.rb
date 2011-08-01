@@ -2,7 +2,11 @@ require 'spec_helper'
 
 describe User do
   before(:each) do
-    @attr = {:first_name => "Example", :last_name => 'User', :email => 'user@example.com'}
+    @attr = {:first_name => "Example", 
+             :last_name => 'User', 
+             :email => 'user@example.com',
+             :password => 'alskvNJ83-',
+             :password_confirmation => 'alskvNJ83-'}
   end
   
   it "should create a new instance given valid attributes" do
@@ -63,6 +67,44 @@ describe User do
     User.create!(@attr.merge(:email => upcased_email))
     user_with_duplicate_email = User.new(@attr)
     user_with_duplicate_email.should_not be_valid
+  end
+  
+  describe "password validations" do
+    it "should require a password" do
+      User.new(@attr.merge(:password =>'', :password_confirmation => '')).
+        should_not be_valid
+    end
+    
+    it "should require a matching password confirmation" do
+      User.new(@attr.merge(:password_confirmation => 'notthesame')).
+        should_not be_valid
+    end
+    
+    it "should reject short passwords" do
+      short_password = "a"*5
+      hash = @attr.merge(:password => short_password, :password_confirmation => short_password)
+      User.new(hash).should_not be_valid
+    end
+    
+    it "should reject long passwords" do
+      long_password = "b"*41
+      hash = @attr.merge(:password => long_password, :password_confirmation => long_password)
+      User.new(hash).should_not be_valid
+    end
+  end
+  
+  describe "password encryption" do
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+    
+    it "should have an encrypted password attribute" do
+      @user.should respond_to(:encrypted_password)
+    end
+    
+    it "should set the encrypted password" do
+      @user.encrypted_password.should_not be_blank
+    end
   end
 end
 
