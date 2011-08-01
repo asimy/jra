@@ -9,6 +9,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'surveyor', :git => 'https://github.com/NUBIC/surveyor.git', :branch => 'rails3'
 gem 'haml'
+gem 'gravatar_image_tag'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -31,11 +32,12 @@ gem 'haml'
 # and rake tasks are available in development mode:
 group :development, :test do  
   gem 'rspec-rails'  
-  # gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'  
+  gem 'factory_girl_rails'
   gem 'webrat'
   gem 'launchy'  
   gem 'database_cleaner'  
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i  
   gem 'guard-rspec'  
   gem 'growl'
+  gem 'annotate'
 end

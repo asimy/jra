@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110622045461) do
+ActiveRecord::Schema.define(:version => 20110801213334) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -33,6 +33,19 @@ ActiveRecord::Schema.define(:version => 20110622045461) do
     t.datetime "updated_at"
     t.string   "default_value"
     t.string   "api_id"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.date     "date_of_birth"
+    t.string   "gender"
+    t.string   "ethnicity"
+    t.string   "unique_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "dependencies", :force => true do |t|
@@ -58,6 +71,12 @@ ActiveRecord::Schema.define(:version => 20110622045461) do
     t.string   "response_other"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "question_groups", :force => true do |t|
@@ -161,6 +180,18 @@ ActiveRecord::Schema.define(:version => 20110622045461) do
   end
 
   add_index "surveys", ["access_code"], :name => "surveys_ac_idx", :unique => true
+
+  create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
   create_table "validation_conditions", :force => true do |t|
     t.integer  "validation_id"
